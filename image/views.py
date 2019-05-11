@@ -9,7 +9,7 @@ def photo_of_today(request):
     date = dt.date.today()
     photo = Image.todays_photo()
     return render(request,'all-images/today-image.html',{'date': date, 'photo':photo,'category':category})
- View Function to present news from past days
+# View Function to present news from past days
 def past_days_photos(request, past_date):
 
     try:
