@@ -8,7 +8,7 @@ category = ['Food','Clothing','Travel','Fashion']
 def photo_of_today(request):
     date = dt.date.today()
     photo = Image.todays_photo()
-    return render(request,'all-photos/today_rudi.html',{'date': date, 'photo':photo,'category':category})
+    return render(request,'all-images/today-image.html',{'date': date, 'photo':photo,'category':category})
  View Function to present news from past days
 def past_days_photos(request, past_date):
 
@@ -25,4 +25,4 @@ def past_days_photos(request, past_date):
         return redirect(photo_of_today)
 
     photo = Image.days_photo(date)
-    return render(request, 'all-photos/past_rudi.html', {"date": date, 'photo':photo})
+    return render(request, 'all-images/past-image.html', {"date": date, 'photo':photo})
