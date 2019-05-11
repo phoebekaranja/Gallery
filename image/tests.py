@@ -1,4 +1,5 @@
 from django.test import TestCase
+import datetime as dt
 from .models import Photographer,location,category,Image
 
 # Create your tests here.

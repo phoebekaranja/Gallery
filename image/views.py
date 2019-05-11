@@ -26,3 +26,9 @@ def past_days_photos(request, past_date):
 
     photo = Image.days_photo(date)
     return render(request, 'all-images/past-image.html', {"date": date, 'photo':photo})
+def image(request,image_id):
+    try:
+        image = Image.objects.get(id = image_id)
+    except DoesNotExist:
+        raise Http404()
+    return render(request,"all-images/image.html", {"image" :image})
