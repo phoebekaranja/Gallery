@@ -17,3 +17,18 @@ class PhotographerTestClass(TestCase):
         self.james.save_photography()
         photography = Photographer.objects.all()
         self.assertTrue(len(photographers) > 0)
+class ImageTestClass(TestCase):
+
+    def setUp(self):
+        # Creating a new editor and saving it
+        self.james= Photographer(first_name = 'James', last_name ='Muriuki', email ='james@moringaschool.com')
+        self.james.save_photography()
+
+        # Creating a new tag and saving it
+        self.new_category = category(name = 'testing')
+        self.new_category.save()
+
+        self.new_image= Image(image = ' ',image_name = 'Test Image',image_description = 'This is a random test Post',photography = self.james, image_category='',image_location='')
+        self.new_image.save()
+
+        self.new_image.category.add(self.new_category)
