@@ -32,3 +32,8 @@ class ImageTestClass(TestCase):
         self.new_image.save()
 
         self.new_image.category.add(self.new_category)
+    def tearDown(self):
+        Photographer.objects.all().delete()
+        category.objects.all().delete()
+        location.objects.all().delete()
+        Image.objects.all().delete()
