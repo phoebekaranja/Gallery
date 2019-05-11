@@ -18,3 +18,19 @@ class Photographer(models.Model):
 
     def save_photography(self):
         self.save()
+class location(models.Model):
+    name = models.CharField(max_length =30)
+
+    def __str__(self):
+        return self.name
+
+    def save_location(self):
+        save.self()
+
+    def delete_location(self):
+        self.delete()
+
+    @classmethod
+    def update_location(cls,location,update):
+         updated = cls.objects.filter(image_name=location).update(name=update)
+         return updated
