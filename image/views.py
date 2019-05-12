@@ -5,8 +5,8 @@ from .models import Image,category,location,Photographer
 
 # Create your views here.
 global category,location
-location = ['Nairobi','Nakuru','Mombasa','Kisumu']
-category = ['Food','Clothing','Travel','Fashion']
+location = ['Nairobi','Nyeri','Mombasa','Kisumu']
+category = ['Picnic','Occasion','Tourism','Fashion']
 
 def photo_of_today(request):
     date = dt.date.today()

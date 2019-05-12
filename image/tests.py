@@ -1,5 +1,4 @@
 from django.test import TestCase
-import datetime as dt
 from .models import Photographer,location,category,Image
 
 # Create your tests here.
@@ -7,22 +6,23 @@ class PhotographerTestClass(TestCase):
 
     # Set up method
     def setUp(self):
-        self.james= Photographer(first_name = 'pitz', last_name ='Peter', email ='pitz@moringaschool.com')
+        self.phoebe= Photographer(first_name = 'phoebe', last_name ='karanja', email ='phoebemurish@gmail.com')
 
     # Testing  instance
     def test_instance(self):
-        self.assertTrue(isinstance(self.pitz,Photographer))
+        self.assertTrue(isinstance(self.phoebe,Photographer))
 
         # Testing Save Method
     def test_save_method(self):
-        self.james.save_photography()
+        self.phoebe.save_photography()
         photography = Photographer.objects.all()
-        self.assertTrue(len(photographers) > 0)
+        self.assertTrue(len(photography) > 0)
+
 class ImageTestClass(TestCase):
 
     def setUp(self):
         # Creating a new editor and saving it
-        self.james= Photographer(first_name = 'James', last_name ='Muriuki', email ='james@moringaschool.com')
+        self.james= Photographer(first_name = 'James', last_name ='Mbuthiya', email ='james@moringaschool.com')
         self.james.save_photography()
 
         # Creating a new tag and saving it
@@ -33,6 +33,7 @@ class ImageTestClass(TestCase):
         self.new_image.save()
 
         self.new_image.category.add(self.new_category)
+
     def tearDown(self):
         Photographer.objects.all().delete()
         category.objects.all().delete()
