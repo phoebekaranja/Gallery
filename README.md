@@ -20,7 +20,7 @@ there are no know Bugs in this web page.
 * CSS
 
 ## Support and contact details.
-For more information contact 0798164370or Email me phoebemurish@gmail.com
+For more information contact 0798164370 or Email me phoebemurish@gmail.com
 
 
 ## Link to live website.
