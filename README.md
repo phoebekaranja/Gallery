@@ -3,7 +3,7 @@
 #### By **phoebekaranja**
 
 ## Description.
-This is a application that displays my favorite photos such that when you click on the photo is should be expand and display more information such as the description of the photo and also the location on of the photo .
+This is an application that displays my favorite photos such that when you click on the photo is should be expand and display more information such as the description of the photo and also the location on of the photo .
 
 ## Setup/Installation Requirements.
 * Make sure the computer has atom .
