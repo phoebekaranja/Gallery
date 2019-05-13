@@ -5,7 +5,7 @@ from .models import Image,category,location,Photographer
 
 # Create your views here.
 global category,location
-location = ['Nairobi','Nyeri','Mombasa','Kisumu']
+location = ['Nairobi','Nyeri','Mombasa','Thika']
 category = ['Picnic','Occasion','Tourism','Fashion']
 
 def photo_of_today(request):
@@ -56,3 +56,6 @@ def image(request,image_id):
     except DoesNotExist:
         raise Http404()
     return render(request,"all-images/image.html", {"image" :image})
+def get_images(request):
+    images = Image.objects.all
+    return render(request,'image.html', {"images":images})

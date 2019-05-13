@@ -1,9 +1,11 @@
 {%extends 'all-images/base.html'%}
 
  {% block content %}
+{% for image in images%}
+
  <div class="container">
    <div class="row">
-     <h1 class="text-center">{{image.image_name}}</h1>
+     <h1 class="text-center">{{image.name}}</h1>
    </div>
    <hr>
 
@@ -30,12 +32,7 @@
          font-family: 'Indie Flower', cursive;
          font-size: 30px;
        }
-       /* #loc{
-         font-family: 'Spicy Rice', cursive;
-         font-family: 'Indie Flower', cursive;
-         font-family: 'Gloria Hallelujah', cursive;
-         font-size: 20px;
-       } */
+
        </style>
        <p class = "image_description">{{image.image_description}}</p>
      </div>
@@ -46,7 +43,7 @@
 
      <footer class="text-center">Image posted since ({{image.photo_date|timesince}}) last seen ({{image.photography.first_name}})
        <br>
-     Link to this Image:<span><input id="myInput" type="text" value="https://gallery-best.herokuapp.com/image/{{image.id}}"><a href="#" class="btn" onclick="myFunction()">copy</a></span></footer>
+     Link to this Image:<span><input id="myInput" type="text" value="https://h5pic.herokuapp.com//{{image.id}}"><a href="#" class="btn" onclick="myFunction()">copy</a></span></footer>
 
  </div>
 
