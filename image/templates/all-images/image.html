@@ -15,7 +15,7 @@
      <div class="col-md-5">
      </div>
      <div class="col-md-2">
-       <img src="{{item.Image_image.url}}" data-toggle="modal" data-target="#myModal{{item.id}}" data-toggle="tooltip"
+       <img src="{{image.image.url}}" data-toggle="modal" data-target="#myModal{{item.id}}" data-toggle="tooltip"
           title="click image to view details" style="height:300px;width:520px" class="img-responsive">
 
      </div>
@@ -39,8 +39,8 @@
         </button>
       </div>
       <div class="modal-body">
-        <img src="{{item.image_image.ur}}" class="img-responsive" alt="Image">
-        
+        <img src="{{item.Image_image.url}}" class="img-responsive" alt="Image">
+
         </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -63,6 +63,7 @@
        }
 
        </style>
+       <p ><img src="{{image.image.url}}" alt="Image" class="img-responsive"></p>
        <p class = "image_description">{{image.image_description}}</p><hr>
      </div>
      <div class="col-md-2">
@@ -72,7 +73,7 @@
 
      <footer class="text-center">Image posted since ({{image.photo_date|timesince}}) last seen ({{image.photography.first_name}})
        <br>
-     Link to this Image:<span><input id="myModal{{item.id}}" type="text" value="https://h5pic.herokuapp.com//{{image.id}}"><a href="#" class="btn" onclick="myFunction()">copy</a></span></footer>
+     Link to this Image:<span><input id="linkcopy" type="text" value="{{image.id}}"><a href="#" class="btn" onclick="myFunction()">copy</a></span></footer>
 
  </div>
 
