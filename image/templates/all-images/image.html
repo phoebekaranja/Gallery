@@ -1,0 +1,80 @@
+{%extends 'all-images/base.html'%}
+
+ {% block content %}
+
+<h2></h2>
+ <div class="container">
+      {% for image in images %}
+   <div class="row">
+
+     <h1 class="text-center">{{image.name}}</h1>
+   </div>
+   <hr>
+
+   <div class="row">
+     <div class="col-md-5">
+     </div>
+     <div class="col-md-2">
+       <img src="{{item.Image_image.url}}" data-toggle="modal" data-target="#myModal{{item.id}}" data-toggle="tooltip"
+          title="click image to view details" style="height:300px;width:520px" class="img-responsive">
+
+     </div>
+
+     {% endfor%}
+     <div class="col-md-5">
+     </div>
+   </div>
+<br>
+<br>
+
+{% for image in images %}
+<!-- Modal -->
+<div class="modal fade" id="myModal{{item.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img src="{{item.image_image.ur}}" class="img-responsive" alt="Image">
+        
+        </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor%}
+
+   <div class="row">
+     <div class="col-md-2">
+     </div>
+     <div class="col-md-8">
+       <style>
+       .image_description{
+         font-family: 'Spicy Rice', cursive;
+         font-family: 'Indie Flower', cursive;
+         font-size: 30px;
+       }
+
+       </style>
+       <p class = "image_description">{{image.image_description}}</p><hr>
+     </div>
+     <div class="col-md-2">
+     </div>
+   </div>
+   <p class="text-center" id ="loc"> Image Location {{image.image_location}} <br> Category {{image.image_category}}</p>
+
+     <footer class="text-center">Image posted since ({{image.photo_date|timesince}}) last seen ({{image.photography.first_name}})
+       <br>
+     Link to this Image:<span><input id="myModal{{item.id}}" type="text" value="https://h5pic.herokuapp.com//{{image.id}}"><a href="#" class="btn" onclick="myFunction()">copy</a></span></footer>
+
+ </div>
+
+
+  {% endblock %}
