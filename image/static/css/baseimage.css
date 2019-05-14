@@ -1,4 +1,6 @@
-h1{
-  color: black;
+body{
+  color: purple;
   font-family: 'Spicy Rice', cursive;
 }
+background-image: radial-gradient(circle, green, purple);
+background-image: radial-gradient(circle closest-side at 45px 45px, green 0%, purple 20%, orange 100%);
