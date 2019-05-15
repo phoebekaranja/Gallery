@@ -17,7 +17,17 @@ class PhotographerTestClass(TestCase):
         self.phoebe.save_photography()
         photography = Photographer.objects.all()
         self.assertTrue(len(photography) > 0)
-
+    def test_delete_method(self):
+        '''
+        Function that tests whether a photo can be deleted from the database
+        '''
+        self.phoebe.save_photography()
+        # self.phoebe.delete_photography()
+    def tearDown(self):
+        Photographer.objects.all().delete()
+        category.objects.all().delete()
+        location.objects.all().delete()
+        Image.objects.all().delete()
 class ImageTestClass(TestCase):
 
     def setUp(self):
@@ -33,6 +43,11 @@ class ImageTestClass(TestCase):
         self.new_image.save()
 
         self.new_image.category.add(self.new_category)
+        def test_delete_method(self):
+            '''
+            Function that tests whether a photo can be deleted from the database
+            '''
+            self.phoebe.save_photography()    
 
     def tearDown(self):
         Photographer.objects.all().delete()
