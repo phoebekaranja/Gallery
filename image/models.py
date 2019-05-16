@@ -64,6 +64,9 @@ class Image(models.Model):
     image_location = models.ForeignKey(location)
     photo_date = models.DateTimeField(auto_now_add=True)
 
+    def __str__(self):
+        return f'{self.image_name}'
+
     @classmethod
     def todays_photo(cls):
         today = dt.date.today()
