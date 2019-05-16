@@ -13,6 +13,10 @@ class PhotographerTestClass(TestCase):
         self.assertTrue(isinstance(self.phoebe,Photographer))
 
         # Testing Save Method
+
+
+
+
     def test_save_method(self):
         self.phoebe.save_photography()
         photography = Photographer.objects.all()
@@ -44,5 +48,3 @@ class ImageTestClass(TestCase):
             Function that tests whether a photo can be deleted from the database
             '''
             self.phoebe.save_photography()
-
-    
