@@ -1,46 +1,62 @@
 ##Gallery
 
+
 The application allows users to view image and e.t.c
 
 
 #Specifications
-To be able to access the application the user should install the latest version of Google chrome or explore and load the live link provided.
 
-A user should view the images A user should copy the image link
+
+To be able to access the application the user should install the latest version of Google chrome or explore and load the live link provided.
+A user should view the images
+A user should copy the image link
 User should search for different categories of photos.
 
 ##Setup/Installation Requirements.
+
+
 Make sure the computer has atom .
 Make sure your computer in connected to a browser.
 Python has been used to form this application
 To be able to run this web application, you will need to have a web browser, preferably Google Chrome. Just open the url link deployed on GitHub and run it.
 
 ##Technologies Used:
+
+
  I worked on this code on Linux OS. I used python as my primary language and flask model to work on the Application. I worked on the code using vs code,Git applications and heruko.
- python
+ Python
 HTML
 Bootstrap
 CSS
 
 ##Support and contact details
+
+
  If there are any issues on how the code runs, concerns, questions or ideas, kindly reach out to me on my email address; phoebemurish@gmail.com.
 
 
 
 #Prerequisites
+
+
  To be able to run this web application, you will need to have a web browser, preferably Google Chrome.
  Just open the url link deployed on GitHub and run it.
 
 ##Technologies Used
+
+
 I worked on this code on Linux OS. I used python as my primary language and django model to work on the Application. I worked on the code using vs code,Git applications and heruko.
 
 
 
 ##live link to site
 
+
+
 https://h5pic.herokuapp.com/
 
 ##License This project is licensed under the MIT License - MIT License
+
 
 Copyright (c) 2018 Phoebekaranja
 
